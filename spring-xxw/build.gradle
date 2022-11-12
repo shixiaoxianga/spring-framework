@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.springframework'
+version '5.3.24-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+    maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter'}
+
+    mavenCentral()
+}
+
+dependencies {
+    implementation(project(":spring-context"))
+    implementation(project(":spring-instrument"))
+}
+
+//test {
+//    useJUnitPlatform()
+//}
